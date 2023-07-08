@@ -298,7 +298,7 @@ class ShowAction(InferenceAction):
     @classmethod
     def _get_out_fname(cls: type, entry_idx: int, fname_base: str):
         base, ext = os.path.splitext(fname_base)
-        return base + ".{0:04d}".format(entry_idx) + ext
+        return base + ext
 
     @classmethod
     def create_context(cls: type, args: argparse.Namespace, cfg: CfgNode) -> Dict[str, Any]:
